@@ -58,11 +58,6 @@ body {
   100% { transform: scale(1.8); opacity: 0; }
 }
 
-/* Grid shining effect */
-@keyframes grid-shine {
-  0% { background-position: 0 0; }
-  100% { background-position: -200% 0; }
-}
 
 /* Animation Utilities */
 .animate-pulse-slow-visible {
@@ -88,4 +83,9 @@ body {
 
 .animate-ring-pulse-visible-3 {
   animation: ring-pulse-visible-3 12s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite 8s; /* 8s delay */
+}
+
+/* Smooth background transitions globally */
+.bg-transition {
+  transition: background-color 0.6s ease, background-image 0.6s ease;
 }

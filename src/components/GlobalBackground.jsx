@@ -1,4 +1,3 @@
-// src/components/GlobalBackground.jsx
 export default function GlobalBackground() {
   return (
     <div className="fixed inset-0 -z-50 overflow-hidden">

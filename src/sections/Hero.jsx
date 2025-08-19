@@ -28,7 +28,7 @@ export default function Hero() {
               href="https://www.linkedin.com/in/chandan-dakka-805068360/"
               target="_blank"
               rel="noreferrer"
-              className="group p-3 rounded-full bg-[#f5f5f5]/10 hover:bg-[#0A66C2] transition-all duration-300"
+              className="bg-transition group p-3 rounded-full bg-[#f5f5f5]/10 hover:bg-[#0A66C2] transition-all duration-300"
             >
               <Linkedin className="w-7 h-7 text-[#f5f5f5] group-hover:text-white transition-colors" />
             </a>
@@ -37,7 +37,7 @@ export default function Hero() {
               href="https://github.com/chandan-1427"
               target="_blank"
               rel="noreferrer"
-              className="group p-3 rounded-full bg-[#f5f5f5]/10 hover:bg-[#181717] transition-all duration-300"
+              className="bg-transition group p-3 rounded-full bg-[#f5f5f5]/10 hover:bg-[#181717] transition-all duration-300"
             >
               <Github className="w-7 h-7 text-[#f5f5f5] group-hover:text-white transition-colors" />
             </a>
@@ -46,7 +46,7 @@ export default function Hero() {
               href="https://mail.google.com/mail/?view=cm&fs=1&to=chandandakka@gmail.com"
               target="_blank"
               rel="noreferrer"
-              className="group p-3 rounded-full bg-[#f5f5f5]/10 hover:bg-[#D93025] transition-all duration-300"
+              className="bg-transition group p-3 rounded-full bg-[#f5f5f5]/10 hover:bg-[#D93025] transition-all duration-300"
             >
               <Mail className="w-7 h-7 text-[#f5f5f5] group-hover:text-white transition-colors" />
             </a>
