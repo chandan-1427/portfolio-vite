@@ -1,0 +1,91 @@
+/* src/index.css */
+@import "tailwindcss";
+
+/* global neon palette - now only violet and black */
+:root {
+  --neon-violet: #a020f0;   /* deeper, more vibrant violet */
+  --neon-black: #080812;    /* almost black, very subtle deep purple hue */
+}
+
+body {
+  /* global dark canvas */
+  @apply antialiased;
+  background-color: var(--neon-black);
+  color: var(--neon-violet);
+  /* Smoother font rendering for a polished look */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Keyframe Animations (Visible & Slower) --- */
+
+/* Slow, visible pulsing for glows */
+@keyframes pulse-slow-visible {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.03); opacity: 0.95; }
+}
+
+/* Delayed visible pulse for variation */
+@keyframes pulse-slow-delay-visible {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.03); opacity: 0.85; }
+}
+
+/* Gentle shimmer for white glow */
+@keyframes shimmer-visible {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 0.8; }
+}
+
+/* Animation for the rings - now a slower, more deliberate outward pulse */
+@keyframes ring-pulse-visible {
+  0% { transform: scale(0.5); opacity: 0.1; }
+  50% { opacity: 0.3; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+/* Animation for the second ring with a delay */
+@keyframes ring-pulse-visible-2 {
+  0% { transform: scale(0.5); opacity: 0.1; }
+  50% { opacity: 0.3; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+/* Animation for the third ring with a longer delay */
+@keyframes ring-pulse-visible-3 {
+  0% { transform: scale(0.5); opacity: 0.1; }
+  50% { opacity: 0.3; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+/* Grid shining effect */
+@keyframes grid-shine {
+  0% { background-position: 0 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Animation Utilities */
+.animate-pulse-slow-visible {
+  animation: pulse-slow-visible 20s infinite alternate ease-in-out;
+}
+
+.animate-pulse-slow-delay-visible {
+  animation: pulse-slow-delay-visible 20s infinite alternate ease-in-out 5s; /* 5s delay */
+}
+
+.animate-shimmer-visible {
+  animation: shimmer-visible 16s infinite alternate ease-in-out;
+}
+
+/* Ring Animations */
+.animate-ring-pulse-visible {
+  animation: ring-pulse-visible 12s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+.animate-ring-pulse-visible-2 {
+  animation: ring-pulse-visible-2 12s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite 4s; /* 4s delay */
+}
+
+.animate-ring-pulse-visible-3 {
+  animation: ring-pulse-visible-3 12s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite 8s; /* 8s delay */
+}
