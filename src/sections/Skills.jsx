@@ -1,4 +1,3 @@
-// src/sections/Skills.jsx
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import {
@@ -115,7 +114,7 @@ const Skills = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/80 to-black"></div>
       </div>
 
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 relative">
+      <h2 className="text-3xl font-title sm:text-4xl md:text-5xl font-extrabold text-center mb-12 relative">
         My Skills
       </h2>
 
@@ -127,9 +126,9 @@ const Skills = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="p-4 sm:p-6 rounded-2xl"
+          className="p-4 sm:p-6 font-accent rounded-2xl"
         >
-          <h3 className="text-xl sm:text-2xl font-bold text-violet-400 mb-6">Technical Skills</h3>
+          <h3 className="text-xl sm:text-2xl font-subtitle font-bold text-violet-400 mb-6">Technical Skills</h3>
           {Object.entries(skills.technical).map(([category, items], idx) => (
             <SkillCategory key={idx} category={category} items={items} />
           ))}
@@ -141,9 +140,9 @@ const Skills = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="p-4 sm:p-6 rounded-2xl"
+          className="p-4 sm:p-6 font-accent rounded-2xl"
         >
-          <h3 className="text-xl sm:text-2xl font-bold text-violet-400 mb-6">Non-Technical Skills</h3>
+          <h3 className="text-xl sm:text-2xl font-subtitle font-bold text-violet-400 mb-6">Non-Technical Skills</h3>
           {Object.entries(skills.nonTechnical).map(([category, items], idx) => (
             <SkillCategory key={idx} category={category} items={items} />
           ))}

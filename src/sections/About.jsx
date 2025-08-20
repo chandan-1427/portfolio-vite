@@ -24,36 +24,46 @@ export default function About() {
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         
         {/* Right column: About text content (comes first on mobile) */}
-        <div className="text-white space-y-6 text-center md:text-left order-1">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#f5f5f5] tracking-wide drop-shadow-lg">
-            About Me
-          </h2>
-          <p className="text-white/90 leading-relaxed text-base sm:text-lg md:text-xl max-w-xl mx-auto md:mx-0 mt-4 drop-shadow-md">
-            I’m{" "}
-            <span className="font-bold text-[#9C27B0] text-lg sm:text-xl md:text-2xl">
-              Chandan
-            </span>{" "}
-            from
-            <span className="text-[#f5f5f5]"> Tirupati, Andhra Pradesh</span>.
-            Currently pursuing my{" "}
-            <span className="font-medium">B.Tech in Computer Science</span>,
-            passionate about crafting digital solutions and exploring modern
-            technologies.
-          </p>
-          <ul className="space-y-3 sm:space-y-4 text-base sm:text-lg">
-            <li>
-              <span className="font-semibold text-[#9C27B0]">Qualification:</span>{" "}
-              B.Tech (Computer Science, expected 2026)
-            </li>
-            <li>
-              <span className="font-semibold text-[#9C27B0]">Domain:</span>{" "}
-              Full Stack Web Development (MERN, JavaScript, Python)
-            </li>
-            <li>
-              <span className="font-semibold text-[#9C27B0]">Interests:</span>{" "}
-              Building scalable apps, fintech, trading systems, and open-source projects.
-            </li>
-          </ul>
+        {/* Parent container with flex layout */}
+        <div className="flex flex-col md:flex-row items-start gap-10">
+          {/* Right column: About text content */}
+          <div className="text-white space-y-6 text-left order-1 flex-1">
+            <h2 className="text-4xl font-subtitle sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#f5f5f5] tracking-wide drop-shadow-lg">
+              About Me
+            </h2>
+            <p className="text-white/90 font-accent font-normal leading-relaxed text-base sm:text-lg md:text-xl max-w-xl mt-4 drop-shadow-md">
+              I’m{" "}
+              <span className="font-bold font-subtitle text-[#9C27B0] text-lg sm:text-xl md:text-2xl">
+                Chandan
+              </span>{" "}
+              from
+              <span className="text-[#f5f5f5]"> Tirupati, Andhra Pradesh</span>. Currently
+              pursuing my{" "}
+              <span className="font-medium">B.Tech in Computer Science</span>, passionate
+              about crafting digital solutions and exploring modern technologies.
+            </p>
+            <ul className="space-y-3 sm:space-y-4 text-base sm:text-lg">
+              <li className="font-accent font-normal">
+                <span className="font-semibold font-title text-[#9C27B0]">
+                  Qualification:
+                </span>{" "}
+                B.Tech (Computer Science, expected 2026)
+              </li>
+              <li className="font-accent font-normal">
+                <span className="font-semibold font-title text-[#9C27B0]">
+                  Domain:
+                </span>{" "}
+                Full Stack Web Development (MERN, JavaScript, Python)
+              </li>
+              <li className="font-accent font-normal">
+                <span className="font-semibold font-title text-[#9C27B0]">
+                  Interests:
+                </span>{" "}
+                Building scalable apps, fintech, trading systems, and open-source
+                projects.
+              </li>
+            </ul>
+          </div>
         </div>
 
         {/* Left column: Image (below text on small screens) */}

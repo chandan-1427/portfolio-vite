@@ -19,9 +19,10 @@ export default function Hero() {
       <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl gap-12">
         {/* Left: Greeting and Socials */}
         <div className={`flex-1 space-y-6 md:text-left order-2 md:order-1 flex flex-col items-center md:items-start transition-all duration-1000 ease-out transform ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
-          <h2 className="text-4xl md:text-6xl font-bold text-[#f5f5f5]">
-            Hi, I’m <span className="text-[#ffffff]">Chandan</span>
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-200">
+          Hi, I’m<br></br> <span className="text-white text-6xl">Chandan</span>
+        </h2>
+
           {/* Socials on desktop */}
           <div className="hidden md:flex gap-6 justify-center md:justify-start">
             <a
@@ -63,7 +64,7 @@ export default function Hero() {
         </div>
 
         {/* Right: Text content */}
-        <div className={`flex-1 space-y-6 md:text-right order-3 flex flex-col items-center md:items-end transition-all duration-1000 delay-500 ease-out transform ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
+        <div className={`flex-1 font-subtitle space-y-6 md:text-right order-3 flex flex-col items-center md:items-end transition-all duration-1000 delay-500 ease-out transform ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
           <p className="text-lg md:text-xl text-[#d1d1d1] max-w-md">
             A passionate <span className="font-bold">Full Stack Developer</span> crafting modern web
             applications with the MERN stack, JavaScript, and beyond.

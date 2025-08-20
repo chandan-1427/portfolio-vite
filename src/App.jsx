@@ -1,42 +1,38 @@
+import { useEffect, useState, lazy, Suspense } from "react";
 import Header from "./sections/Header";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
-import Projects from "./sections/Projects";
-import Skills from "./sections/Skills";
-import Contact from "./sections/Contact";
 import GlobalBackground from "./components/GlobalBackground";
+import Loader from "./components/Loader";
 
-// ✨ import motion
-import { motion } from "framer-motion";
+// Lazy load heavy sections
+const Projects = lazy(() => import("./sections/Projects"));
+const Skills = lazy(() => import("./sections/Skills"));
+const Contact = lazy(() => import("./sections/Contact"));
 
 export default function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const handleLoad = () => setLoading(false);
+    window.addEventListener("load", handleLoad);
+    return () => window.removeEventListener("load", handleLoad);
+  }, []);
+
+  if (loading) return <Loader />;
+
   return (
     <>
       <GlobalBackground />
       <Header />
       <Hero />
       <About />
-      <Projects />
 
-      {/* Fade-in Skills section */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1.2, ease: "easeInOut" }}
-      >
+      <Suspense fallback={<Loader />}>
+        <Projects />
         <Skills />
-      </motion.div>
-
-      {/* Fade-in Contact section */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1.2, ease: "easeInOut" }}
-      >
         <Contact />
-      </motion.div>
+      </Suspense>
     </>
   );
 }

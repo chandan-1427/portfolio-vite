@@ -63,9 +63,8 @@ const Projects = () => {
 
       <div className="container mx-auto relative z-10">
         {/* Section Heading */}
-        <h2 className="text-4xl sm:text-5xl font-extrabold text-center mb-16 relative">
+        <h2 className="text-4xl font-title sm:text-5xl font-extrabold text-center mb-16 relative">
           My Work
-          <div className="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-24 h-1 bg-violet-600 rounded-full"></div>
         </h2>
 
         {/* Projects Grid */}
@@ -81,12 +80,12 @@ const Projects = () => {
               transition={{ duration: 0.5, delay: idx * 0.12 }}
             >
               {/* Project Title */}
-              <h3 className="text-2xl font-bold text-violet-400 mb-3">
+              <h3 className="text-2xl font-accent font-bold text-violet-400 mb-3">
                 {project.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-300 text-sm leading-relaxed flex-grow mb-4">
+              <p className="text-gray-300 font-subtitle text-sm leading-relaxed flex-grow mb-4">
                 {project.description}
               </p>
 
@@ -105,7 +104,7 @@ const Projects = () => {
               )}
 
               {/* Links */}
-              <div className="mt-auto flex justify-between items-center pt-4 border-t border-gray-700">
+              <div className="mt-auto font-subtitle flex justify-between items-center pt-4 border-t border-gray-700">
                 <a
                   href={project.github}
                   target="_blank"

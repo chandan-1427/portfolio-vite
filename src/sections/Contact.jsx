@@ -49,10 +49,10 @@ const Contact = () => {
       id="contact"
       className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white px-6 py-16 relative"
     >
-      <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">
+      <h2 className="text-4xl font-title md:text-5xl font-bold text-center mb-6">
         Let’s Connect
       </h2>
-      <p className="text-center text-lg text-gray-300 max-w-xl mb-12">
+      <p className="text-center font-accent text-lg text-gray-300 max-w-xl mb-12">
         Whether it’s about job opportunities, collaborations, or just tech talk —
         I’d love to hear from you. Feel free to reach out through any of the
         platforms below.
@@ -90,7 +90,7 @@ const Contact = () => {
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="w-full max-w-lg space-y-4 backdrop-blur-sm bg-white/10 p-6 rounded-2xl border border-gray-700"
+        className="w-full max-w-lg font-accent space-y-4 backdrop-blur-sm bg-white/10 p-6 rounded-2xl border border-gray-700"
       >
         <input
           type="text"
@@ -130,14 +130,15 @@ const Contact = () => {
 
         {/* Feedback Messages */}
         {status.success && (
-          <p className="text-green-400 mt-2 text-center">
+          <div className="mt-4 px-4 py-3 rounded-xl bg-green-500/10 border border-green-500/30 text-green-400 text-center text-sm md:text-base shadow-sm">
             Thank you! I’ve received your message and will get back to you soon.
-          </p>
+          </div>
         )}
+
         {status.error && (
-          <p className="text-red-400 mt-2 text-center">
+          <div className="mt-4 px-4 py-3 rounded-xl bg-red-500/10 border border-red-500/30 text-red-400 text-center text-sm md:text-base shadow-sm">
             Oops! Something went wrong. Please try again later.
-          </p>
+          </div>
         )}
       </form>
     </section>

@@ -76,17 +76,22 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-transform duration-500`}
+      className={`fixed font-subtitle font-semibold top-0 left-0 w-full z-50 transition-transform duration-500`}
     >
       <div className="backdrop-blur-sm bg-black/10 shadow-md">
         <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-20">
           {/* Branding */}
-          <h1 className="relative text-2xl md:text-3xl font-extrabold text-white tracking-[0.1em]">
+          {/* Branding - Scroll to Hero on click */}
+          <h1
+            onClick={(e) => handleScrollToSection(e, "#hero")}
+            className="relative font-title text-2xl md:text-3xl font-extrabold text-white tracking-[-0.01em] cursor-pointer hover:text-purple-400 transition-colors"
+          >
             CHANDAN
           </h1>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex gap-10">
+            
             {navItems.map(({ name, icon: Icon, href }) => (
               <a
                 key={name}
